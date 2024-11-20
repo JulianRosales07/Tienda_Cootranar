@@ -1,0 +1,135 @@
+/* Estilo global para el cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../images/Cootranar.webp') no-repeat center center fixed; /* Cambia a la ruta de tu imagen */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+/* Contenedor principal */
+.main-container {
+    max-width: 400px; /* Ajusta el ancho máximo del contenedor */
+    width: 100%; /* Permite que el contenedor use el ancho completo en pantallas pequeñas */
+    padding: 20px; /* Espacio interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco de transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+}
+
+/* Estilo para las pestañas */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espacio entre pestañas y formularios */
+}
+
+.tab-button {
+    flex: 1; /* Hace que los botones ocupen espacio igual */
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.tab-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efecto hover */
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #007BFF; /* Línea activa para el botón activo */
+}
+
+/* Estilo para formularios */
+.container-form {
+    display: none; /* Oculta los formularios inicialmente */
+}
+
+.container-form.active {
+    display: block; /* Muestra el formulario activo */
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+.formulario label {
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+    font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px; /* Espacio entre campos */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Botones */
+.formulario input[type="submit"] {
+    padding: 10px;
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+/* Iconos */
+.iconos {
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    margin: 10px 0; /* Espacio entre iconos y formulario */
+}
+
+.border-icon {
+    margin: 0 5px; /* Espacio entre iconos */
+    padding: 10px;
+    border-radius: 50%; /* Hace los iconos circulares */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.border-icon:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Estilo para el menú desplegable */
+select {
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-bottom: 15px; /* Espacio entre el menú y el siguiente campo */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    background-color: white; /* Color de fondo */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Estilo para el menú desplegable al hacer foco */
+select:focus {
+    border-color: #007BFF; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
